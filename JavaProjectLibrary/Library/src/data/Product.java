@@ -8,12 +8,22 @@ public class Product {
 	
 	private String author;
 	
+	private int id;
+	
+	private boolean checkedIn;
+	
+	private static int count = 1;
+	
 	public Product() {
 		super();
+		this.id = count++;
+		this.checkedIn = true;
 	}
 	
 	public Product(String name, int release, String author) {
 		super();
+		this.id = count++;
+		this.checkedIn = true;
 		this.name = name;
 		this.release = release;
 		this.author = author;
@@ -43,4 +53,24 @@ public class Product {
 		this.author = author;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public boolean isCheckedIn() {
+		return checkedIn;
+	}
+
+	public boolean setCheckedIn(boolean checkedIn) {
+		return this.checkedIn = checkedIn;
+	}
+	
+	public String toString() {
+		return "Product Name" + name + ", Release=" + release + ", author=" + author
+				+ ", id=" + id + ", checkedIn=" + checkedIn;
+	}
 }
