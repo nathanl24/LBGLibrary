@@ -8,7 +8,7 @@ import data.Product;
 public class Library {
 
 	private ArrayList<Product> products = new ArrayList<>();
-	private ArrayList<Person> people = new ArrayList<>();
+	//private ArrayList<Person> people = new ArrayList<>();
 
 	
 	public boolean stockAdd(Product p) {
